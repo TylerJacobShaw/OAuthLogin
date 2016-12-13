@@ -51,8 +51,8 @@ namespace RemusWeb
             //   appSecret: "");
 
             app.UseGoogleAuthentication(
-                 clientId: "000-000.apps.googleusercontent.com",
-                 clientSecret: "00000000000");
+                 clientId: "810642629629-rcgoldp4dt283mffbki576d6r65knig7.apps.googleusercontent.com",
+                 clientSecret: "TByzmtwfcKqaS4qSXVJVtwca");
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
             app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));
