@@ -37,6 +37,23 @@ namespace RemusWeb
             });            
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
+            // Uncomment the following lines to enable logging in with third party login providers
+            //app.UseMicrosoftAccountAuthentication(
+            //    clientId: "",
+            //    clientSecret: "");
+
+            //app.UseTwitterAuthentication(
+            //   consumerKey: "",
+            //   consumerSecret: "");
+
+            //app.UseFacebookAuthentication(
+            //   appId: "",
+            //   appSecret: "");
+
+            app.UseGoogleAuthentication(
+                 clientId: "000-000.apps.googleusercontent.com",
+                 clientSecret: "00000000000");
+
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
             app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));
 
